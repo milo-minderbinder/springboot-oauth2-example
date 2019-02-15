@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.boot.autoconfigure: DEBUG
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: CHANGEME
+            clientSecret: CHANEGME
+          okta:
+            client-id: CHANEGME
+            client-secret: CHANEGME
+        provider:
+          okta:
+            issuer-uri: https://dev-CHANGEME.oktapreview.com
