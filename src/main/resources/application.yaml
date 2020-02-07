@@ -22,3 +22,7 @@ spring:
         provider:
           okta:
             issuer-uri: https://dev-CHANGEME.oktapreview.com
+
+management:
+  server:
+    port: -1
