@@ -26,6 +26,13 @@
     <div>
         <button onClick="logout()" class="btn btn-primary">Logout</button>
     </div>
+    <div><a href="/user">/user</a></div>
+    <div><a href="/authentication">/authentication</a></div>
+    <div><a href="/authorizedClient">/authorizedClient</a></div>
+    <div><a href="/getOAuth2User">/getOAuth2User</a></div>
+    <div><a href="/getOIDCUser">/getOIDCUser</a></div>
+    <div><a href="/getAccessToken">/getAccessToken</a></div>
+    <div><a href="/getOidcIdToken">/getOidcIdToken</a></div>
 </div>
 <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
 <script type="text/javascript">
@@ -41,7 +48,7 @@
             }
         }
     });
-    $.get("/user", function (data) {
+    $.get("/user", function(data) {
         console.log(data);
         $("#user").html(data.principal.attributes.name);
         $(".unauthenticated").hide();

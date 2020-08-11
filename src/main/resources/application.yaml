@@ -7,6 +7,9 @@ logging:
     org.springframework.web: INFO
     org.springframework.security: DEBUG
     org.springframework.boot.autoconfigure: DEBUG
+    co.insecurity: DEBUG
+  file:
+    name: ./demo.log
 
 spring:
   security:
@@ -21,7 +24,18 @@ spring:
             client-secret: CHANEGME
         provider:
           okta:
-            issuer-uri: https://dev-CHANGEME.oktapreview.com
+            issuer-uri: CHANGEME
+
+      resourceserver:
+        jwt:
+          issuer-uri: CHANGEME
+          jws-algorithm: RS256
+
+my:
+  oauth2:
+    resource-server:
+      allowed-audience-values:
+        - api://default
 
 management:
   server:
